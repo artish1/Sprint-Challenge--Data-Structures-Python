@@ -57,8 +57,11 @@ class LinkedList:
             node.set_next(prev)
             return
 
+        # Preserve next node in original non-reversed list
         next_node = node.get_next()
 
+        # Start Reversing
         node.set_next(prev)
 
+        # Recurse
         self.reverse_list(next_node, node)
